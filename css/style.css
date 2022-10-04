@@ -11,13 +11,13 @@
     --color-danger: #ff7782;
     --color-success: #41f1b6;
     --color-warning: #ffbb55;
-    --color-info-dark: #7d8d1a;
+    --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
     --color-white: #fff;
     --color-dark: #363949;
-    --color-ligth: rgba(132,139,200, 0.18);
+    --color-light: rgba(132,139,200, 0.18);
     --color-primary-variant: #111e88;
-    --color-dark-variant: $677483;
+    --color-dark-variant: #677483;
     --color-background: #f6f6f9;
 
 
@@ -114,6 +114,7 @@ b{
 	height: 2.8rem;
 	border-radius: 50%;
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 .text-muted{
@@ -208,7 +209,7 @@ aside .sidebar a:last-child{
 }
 
 aside .sidebar a.active{
-	background: var(--color-ligth);
+	background: var(--color-light);
 	color: var(--color-primary);
 	margin-left: 0;
 }
@@ -253,7 +254,7 @@ main{
 main .date{
 	margin-top: 1rem;
 	display: inline-block;
-	background: var(--color-ligth);
+	background: var(--color-light);
 	border-radius: var(--border-radius-1);
 	padding: 0.5rem 1.6rem;
 }
@@ -345,7 +346,7 @@ main .insights .income svg circle{
 	stroke-dashoffset: 35;
 	stroke-dasharray: 110;
 }
-
+/*
 main .insights .progress .number{
 	position: absolute;
 	top: 0;
@@ -355,4 +356,59 @@ main .insights .progress .number{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}*/
+
+main .recent-order{
+	margin-top: 2rem;
 }
+
+main .recent-order h2{
+	margin-bottom: 0.8rem;
+}
+
+main .recent-order table{
+	background: var(--color-white);
+	width: 100%;
+	border-radius: var(--card-border-radius);
+	padding: var(--card-padding);
+	text-align: center;
+	box-shadow: var(--box-shadow);
+	transition: all 300ms ease;
+}
+
+main .recent-order table:hover{
+	box-shadow: none;
+}
+
+main table tbody td{
+	height: 2rem;
+	border-bottom: 1px solid var(--color-light);
+	color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+	border: none;
+}
+
+main .recent-order a{
+	text-align: center;
+	display: block;
+	margin: 1rem auto;
+	color: var(--color-primary);
+}
+
+/*main div ends here*/
+
+/*rigth side starts here*/
+
+.right{
+     margin-top: 1.4rem;
+}
+
+.right .top{
+	display: flex;
+	justify-content: flex-end;
+	gap: 2rem;
+}
+
+/*rigth side starts here*/
