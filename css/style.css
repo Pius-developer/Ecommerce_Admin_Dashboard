@@ -55,6 +55,7 @@ body{
 	background: var(--color-background);
 	user-select: none;
 	overflow: hidden;
+	color: var(--color-dark);
 }
 
 .container{
@@ -142,7 +143,7 @@ b{
 
 aside{
 	height: 100vh;
-	background: #f2f9fe;
+	/*background: #f2f9fe;*/
 }
 
 aside .top{
@@ -243,4 +244,115 @@ aside .sidebar .message-count{
 /*side bar menu*/
 
 
-/*side bar*/
+/*main section starts here*/
+
+main{
+	margin-top: 1.4rem;
+}
+
+main .date{
+	margin-top: 1rem;
+	display: inline-block;
+	background: var(--color-ligth);
+	border-radius: var(--border-radius-1);
+	padding: 0.5rem 1.6rem;
+}
+
+main .date input[type="date"]{
+	background: transparent;
+	color: var(--color-dark);
+}
+
+main .insights{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.6rem;
+}
+
+main .insights > div{
+	background: var(--color-white);
+	padding: var(--card-padding);
+	border-radius: var(--card-border-radius);
+	margin-top: 1rem;
+	box-shadow: var(--box-shadow);
+	transition: all 300ms ease;
+}
+
+main .insights > div:hover{
+    box-shadow: none;
+}
+
+main .insights > div span{
+	 background: var(--color-primary);
+	 padding: 0.5rem;
+	 border-radius: 50%;
+	 color: var(--color-white);
+	 font-size: 1.8rem;
+}
+
+main .insights > div.expenses span{
+	background: var(--color-danger);
+}
+
+main .insights > div.income span{
+	background: var(--color-success);
+}
+
+main .insights > div .middle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .insights h3{
+	margin: 1rem 0 0.6rem;
+	font-size: 1rem;
+}
+
+main .insights progress{
+	position: relative;
+	width: 92px;
+	height: 92px;
+	border-radius: 50%;
+}
+
+main .insights svg{
+	height: 7rem;
+	width: 7rem;
+}
+
+main .insights svg circle{
+	fill: none;
+	stroke: var(--color-primary);
+	stroke-width: 14;
+	stroke-linecap: round;
+	transform: translate(5px, 5px);
+	stroke-dasharray: 110;
+	stroke-dashoffset: 92;
+}
+
+main .insights .sales svg circle{
+	stroke-dashoffset: -30;
+	stroke-dasharray: 200;
+}
+
+main .insights .expenses svg circle{
+	stroke-dashoffset: 20;
+	stroke-dasharray: 80;
+}
+
+main .insights .income svg circle{
+	stroke-dashoffset: 35;
+	stroke-dasharray: 110;
+}
+
+main .insights .progress .number{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
